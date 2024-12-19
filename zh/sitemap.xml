@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://atditto.github.io/</loc>
+    <lastmod>2024-12-19T17:00:25+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://atditto.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://atditto.github.io/"
+                />
+  </url><url>
     <loc>https://atditto.github.io/blog/</loc>
     <lastmod>2024-12-19T16:02:44+08:00</lastmod>
   </url><url>
@@ -45,18 +58,5 @@
   </url><url>
     <loc>https://atditto.github.io/categories/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB/</loc>
     <lastmod>2024-12-19T16:02:44+08:00</lastmod>
-  </url><url>
-    <loc>https://atditto.github.io/</loc>
-    <lastmod>2024-12-19T16:00:52+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://atditto.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://atditto.github.io/"
-                />
   </url>
 </urlset>
