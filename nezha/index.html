@@ -24,7 +24,7 @@ Deadline-Ordered Multicast (DOM)：通过高精度时钟同步减少公共云中
 文章的动机是公共云环境中的重排问题。具体来说，在公共云环境中，由于网络路径的不同，消息到达不同接收者的顺序可能不同，导致重排现象频繁发生，进而增加了维护分布式系统一致性的开销。
 作者通过在 Google Cloud 上的实验发现，在公共云环境中，消息重排现象非常普遍。这三个图表共同展示了在 Google Cloud 上，重排序得分（Reordering Score）是如何受到提交速率、发送者数量以及使用不同百分位估计的 DOM 的影响的。
 重排序得分越高，表示公有云中发生的重排序越多。图 1 显示，当我们改变提交率，保持发送者的数量固定为 2 时，重新排序的得分很快超过 28%。在图 2 中，当我们改变发送者的数量时，保持提交率固定在 10K 条消息/秒，重新排序得分随着发送者数量的增加而迅速增加到 43%。">
-<meta name="author" content="map[name:atditto]">
+<meta name="author" content="">
 <link rel="canonical" href="https://atditto.github.io/nezha/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d72444526d7ecbdb0015438a7fa89054a658bf759d0542e2e5df81ce94b493ee.css" integrity="sha256-1yREUm1&#43;y9sAFUOKf6iQVKZYv3WdBULi5d&#43;BzpS0k&#43;4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atditto.github.io/favicon.ico">
@@ -81,7 +81,7 @@ Nezha 的核心思想 Nezha 的核心思想包括以下几个方面：
 Deadline-Ordered Multicast (DOM)：通过高精度时钟同步减少公共云中的消息重排。 推测执行（Speculative Execution）：在请求提交之前执行请求，以减少延迟。 代理部署（Proxy Deployment）：使用无状态代理来减轻客户端的计算负担。 每个接收者接收到的消息序列的最长递增子序列（Longest Increasing Subsequence, LIS）。 公共云环境中的重排问题 文章的动机是公共云环境中的重排问题。具体来说，在公共云环境中，由于网络路径的不同，消息到达不同接收者的顺序可能不同，导致重排现象频繁发生，进而增加了维护分布式系统一致性的开销。
 作者通过在 Google Cloud 上的实验发现，在公共云环境中，消息重排现象非常普遍。这三个图表共同展示了在 Google Cloud 上，重排序得分（Reordering Score）是如何受到提交速率、发送者数量以及使用不同百分位估计的 DOM 的影响的。
 重排序得分越高，表示公有云中发生的重排序越多。图 1 显示，当我们改变提交率，保持发送者的数量固定为 2 时，重新排序的得分很快超过 28%。在图 2 中，当我们改变发送者的数量时，保持提交率固定在 10K 条消息/秒，重新排序得分随着发送者数量的增加而迅速增加到 43%。">
-  <meta property="og:locale" content="zh">
+  <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="article">
     <meta property="article:published_time" content="2024-12-19T16:02:44+08:00">
     <meta property="article:modified_time" content="2024-12-19T16:02:44+08:00">
@@ -138,10 +138,6 @@ Deadline-Ordered Multicast (DOM)：通过高精度时钟同步减少公共云中
   "inLanguage": "zh",
   "datePublished": "2024-12-19T16:02:44+08:00",
   "dateModified": "2024-12-19T16:02:44+08:00",
-  "author":{
-    "@type": "Person",
-    "name": {"name":"atditto"}
-  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://atditto.github.io/nezha/"
@@ -195,40 +191,9 @@ Deadline-Ordered Multicast (DOM)：通过高精度时钟同步减少公共云中
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                    <li>
-                        <a href="https://atditto.github.io/en/" title="English"
-                            aria-label="English">En</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
-            <li>
-                <a href="https://atditto.github.io/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://atditto.github.io/about/" title="关于">
-                    <span>关于</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://atditto.github.io/blog/" title="博客">
-                    <span>博客</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://atditto.github.io/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://atditto.github.io/posts/" title="归档">
-                    <span>归档</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -240,7 +205,7 @@ Deadline-Ordered Multicast (DOM)：通过高精度时钟同步减少公共云中
     <h1 class="post-title entry-hint-parent">
       Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks
     </h1>
-    <div class="post-meta"><span title='2024-12-19 16:02:44 +0800 CST'>十二月 19, 2024</span>&nbsp;·&nbsp;map[name:atditto]
+    <div class="post-meta"><span title='2024-12-19 16:02:44 +0800 CST'>十二月 19, 2024</span>
 
 </div>
   </header> 
