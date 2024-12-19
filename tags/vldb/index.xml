@@ -9,7 +9,7 @@
     <lastBuildDate>Thu, 19 Dec 2024 16:02:44 +0800</lastBuildDate>
     <atom:link href="https://atditto.github.io/tags/vldb/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nezha: 可部署且高性能的共识协议</title>
+      <title>Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks</title>
       <link>https://atditto.github.io/blog/nezha/</link>
       <pubDate>Thu, 19 Dec 2024 16:02:44 +0800</pubDate>
       <guid>https://atditto.github.io/blog/nezha/</guid>
