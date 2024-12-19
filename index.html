@@ -174,25 +174,6 @@
 
 
 </div>
-
-<article class="first-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Nezha: 可部署且高性能的共识协议 大家好，今天我要给大家介绍一篇来自 VLDB 2023 的论文，题目是《Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks》。这篇论文由斯坦福大学和纽约大学的研究团队共同完成，作者包括 Jinkun Geng、Anirudh Sivaraman、Balaji Prabhakar 和 Mendel Rosenblum。
-背景介绍 在现代数据库和微秒级应用中，高性能的共识协议至关重要。这些应用需要高吞吐量和低延迟的共识协议来确保数据一致性和容错性。然而，现有的共识协议如 Multi-Paxos 和 Raft 虽然可以广泛部署，但其性能存在局限性。而像 NOPaxos 和 Speculative Paxos 这样的高性能替代方案，则需要云服务提供商的技术支持，普通云租户无法轻易获得。
-基于这个背景，Nezha 的目标是开发一种高性能的共识协议，能够在公共云环境中由租户自行部署，而不依赖于云服务提供商的支持。
-Nezha 的核心思想 Nezha 的核心思想包括以下几个方面：
-Deadline-Ordered Multicast (DOM)：通过高精度时钟同步减少公共云中的消息重排。 推测执行（Speculative Execution）：在请求提交之前执行请求，以减少延迟。 代理部署（Proxy Deployment）：使用无状态代理来减轻客户端的计算负担。 每个接收者接收到的消息序列的最长递增子序列（Longest Increasing Subsequence, LIS）。 公共云环境中的重排问题 文章的动机是公共云环境中的重排问题。具体来说，在公共云环境中，由于网络路径的不同，消息到达不同接收者的顺序可能不同，导致重排现象频繁发生，进而增加了维护分布式系统一致性的开销。
-作者通过在 Google Cloud 上的实验发现，在公共云环境中，消息重排现象非常普遍。这三个图表共同展示了在 Google Cloud 上，重排序得分（Reordering Score）是如何受到提交速率、发送者数量以及使用不同百分位估计的 DOM 的影响的。
-重排序得分越高，表示公有云中发生的重排序越多。图 1 显示，当我们改变提交率，保持发送者的数量固定为 2 时，重新排序的得分很快超过 28%。在图 2 中，当我们改变发送者的数量时，保持提交率固定在 10K 条消息/秒，重新排序得分随着发送者数量的增加而迅速增加到 43%。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-19 16:02:44 +0800 CST'>十二月 19, 2024</span>&nbsp;·&nbsp;map[name:atditto]</footer>
-  <a class="entry-link" aria-label="post link to Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks" href="https://atditto.github.io/blog/nezha/"></a>
-</article>
     </main>
     
 <footer class="footer">
