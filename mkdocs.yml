@@ -1,6 +1,8 @@
 site_name: '@〃'
 site_url: https://atditto.github.io/
 site_author: atditto
+# Repository
+repo_name: atditto/@〃
 repo_url: https://github.com/atditto/atditto.github.io
 
 nav:
@@ -12,17 +14,27 @@ theme:
   name: material
   language: zh # 一些提示性的文字会变成中文
   palette:
-    # Palette toggle for light mode
-    - scheme: default
+    # ===================================================================
+    # 日间模式：当用户系统设置为“浅色模式”时自动启用
+    # ===================================================================
+    - media: "(prefers-color-scheme: light)"  # 监听操作系统是否设置为浅色主题
+      scheme: default                        # 使用 Material 的默认色彩方案（亮色背景）
+      primary: cyan                          # 主色调：应用于顶部导航栏、按钮等
+      accent: blue                           # 强调色：用于链接、选中状态、滑块等交互元素
       toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
+        icon: octicons/moon-16         # 切换按钮图标：显示为“开”状态的开关
+        name: 切换到夜间模式                # 鼠标悬停时显示的提示文字
 
-    # Palette toggle for dark mode
-    - scheme: slate
+    # ===================================================================
+    # 夜间模式：当用户系统设置为“深色模式”时自动启用
+    # ===================================================================
+    - media: "(prefers-color-scheme: dark)"  # 监听操作系统是否设置为深色主题
+      scheme: slate                          # 使用 Material 的深色方案（深灰背景，护眼）
+      primary: black                         # 主色调：顶部导航栏变为黑色，更沉浸
+      accent: indigo                         # 强调色：靛蓝色，与深色背景搭配更协调
       toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+        icon: octicons/sun-16  # 切换按钮图标：显示为“关”状态的开关
+        name: 切换到日间模式                # 鼠标悬停时显示的提示文字
 
   features:
     - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
@@ -47,4 +59,4 @@ theme:
     - content.code.annotate
 
   icon:
-    logo: logo
+    logo: octicons/command-palette-16
