@@ -1,22 +1,21 @@
-site_name: '@〃'
+# Site Information
+site_name: ''
 site_url: https://atditto.github.io/
 site_author: atditto
-# Repository
+# Repository Information
 repo_name: atditto/@〃
 repo_url: https://github.com/atditto/atditto.github.io
 
+# Navigation Tab
 nav:
   - 主页:
       - index.md
 
-
+# Theme Config
 theme:
   name: material
   language: zh # 一些提示性的文字会变成中文
   palette:
-    # ===================================================================
-    # 日间模式：当用户系统设置为“浅色模式”时自动启用
-    # ===================================================================
     - media: "(prefers-color-scheme: light)"  # 监听操作系统是否设置为浅色主题
       scheme: default                        # 使用 Material 的默认色彩方案（亮色背景）
       primary: cyan                          # 主色调：应用于顶部导航栏、按钮等
@@ -25,9 +24,6 @@ theme:
         icon: octicons/moon-16         # 切换按钮图标：显示为“开”状态的开关
         name: 切换到夜间模式                # 鼠标悬停时显示的提示文字
 
-    # ===================================================================
-    # 夜间模式：当用户系统设置为“深色模式”时自动启用
-    # ===================================================================
     - media: "(prefers-color-scheme: dark)"  # 监听操作系统是否设置为深色主题
       scheme: slate                          # 使用 Material 的深色方案（深灰背景，护眼）
       primary: black                         # 主色调：顶部导航栏变为黑色，更沉浸
