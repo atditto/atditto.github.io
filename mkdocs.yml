@@ -8,14 +8,15 @@ repo_url: https://github.com/atditto/atditto.github.io
 
 # Navigation Config
 nav:
-  - 🏠 主页:
-      - index.md
-      - about.md
+  - 🏠 主页: index.md
+  - 👭 友链: links.md
+  - 📖 笔记: note/test.md
 
 # Theme Config
 theme:
   name: material
-  language: zh # 一些提示性的文字会变成中文
+  language: zh
+  custom_dir: overrides
   icon:
     logo: octicons/command-palette-16
   palette:
@@ -36,25 +37,16 @@ theme:
         name: 切换到日间模式                # 鼠标悬停时显示的提示文字
 
   features:
-    - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
-    # - navigation.instant
-    #- header.autohide  #自动隐藏
-    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-    - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-    # - navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.footer #页脚将呈现在边栏中，但在移动设备上保持原样
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight # 搜索出的文章关键词加入高亮
-    - search.share #搜索分享按钮
-    - navigation.expand # 打开Tab时左侧目录全部展开
-    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
-    - content.tabs.link
-    - content.tooltips
-    - content.code.copy #代码复制
-    - content.action.edit
-    - content.action.view
     - content.code.annotate
+    - content.code.copy
+    # - navigation.instant # This will cause LaTeX render fail at the first try.
+    - navigation.tracking
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    # - navigation.prune
 
 

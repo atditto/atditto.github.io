@@ -1,5 +1,3 @@
-# 颜色主题
-
 ### 日间 / 夜间
 
 <div class="tx-switch">
