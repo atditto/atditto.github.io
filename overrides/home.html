@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}">
+{% endblock %}
 <!-- Render hero under tabs -->
 {% block tabs %}
   {{ super() }}
@@ -26,7 +28,7 @@
       right: 0;
       /* 不设置 height 或让其自然高度 */
       z-index: 100; /* 确保它在最上层 */
-      background-color: rgba(255, 255, 255, 0.8); /* 可选：半透明背景 */
+      background-color: initial; /* 可选：半透明背景 */
       /* background-color: transparent; */ /* 或者完全透明 */
       box-shadow: none; /* 可选：移除阴影 */
       /* --- 防止滚动条 --- */
@@ -35,8 +37,6 @@
       padding: 0; /* 检查实际渲染，可能需要调整 */
       /* --- 防止滚动条结束 --- */
     }
-
-
 
     /* 隐藏夜间模式切换按钮 */
     .md-header__option[data-md-component="palette"] {
