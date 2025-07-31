@@ -15,6 +15,8 @@ nav:
 theme:
   name: material
   language: zh # 一些提示性的文字会变成中文
+  icon:
+    logo: octicons/command-palette-16
   palette:
     - media: "(prefers-color-scheme: light)"  # 监听操作系统是否设置为浅色主题
       scheme: default                        # 使用 Material 的默认色彩方案（亮色背景）
@@ -54,5 +56,4 @@ theme:
     - content.action.view
     - content.code.annotate
 
-  icon:
-    logo: octicons/command-palette-16
+
