@@ -10,7 +10,12 @@ repo_url: https://github.com/atditto/atditto.github.io
 nav:
   - 🏠 主页: index.md
   - 👭 友链: links.md
-  - 📖 笔记: note/test.md
+  - 📖 笔记:
+      - note/index.md
+      - "MIT Web Lab(6.962)":
+          - note/6.962/index.md
+          - note/6.962/day1.md
+
 
 # Theme Config
 theme:
