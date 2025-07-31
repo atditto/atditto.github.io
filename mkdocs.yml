@@ -20,13 +20,13 @@ theme:
   icon:
     logo: octicons/command-palette-16
   palette:
-    - media: "(prefers-color-scheme: light)"  # 监听操作系统是否设置为浅色主题
-      scheme: default                        # 使用 Material 的默认色彩方案（亮色背景）
-      primary: cyan                          # 主色调：应用于顶部导航栏、按钮等
-      accent: blue                           # 强调色：用于链接、选中状态、滑块等交互元素
-      toggle:
-        icon: octicons/moon-16         # 切换按钮图标：显示为“开”状态的开关
-        name: 切换到夜间模式                # 鼠标悬停时显示的提示文字
+    # - media: "(prefers-color-scheme: light)"  # 监听操作系统是否设置为浅色主题
+    #   scheme: default                        # 使用 Material 的默认色彩方案（亮色背景）
+    #   primary: cyan                          # 主色调：应用于顶部导航栏、按钮等
+    #   accent: blue                           # 强调色：用于链接、选中状态、滑块等交互元素
+    #   toggle:
+    #     icon: octicons/moon-16         # 切换按钮图标：显示为“开”状态的开关
+    #     name: 切换到夜间模式                # 鼠标悬停时显示的提示文字
 
     - media: "(prefers-color-scheme: dark)"  # 监听操作系统是否设置为深色主题
       scheme: slate                          # 使用 Material 的深色方案（深灰背景，护眼）
