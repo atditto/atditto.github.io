@@ -20,21 +20,21 @@ theme:
   icon:
     logo: octicons/command-palette-16
   palette:
-    # - media: "(prefers-color-scheme: light)"  # 监听操作系统是否设置为浅色主题
-    #   scheme: default                        # 使用 Material 的默认色彩方案（亮色背景）
-    #   primary: cyan                          # 主色调：应用于顶部导航栏、按钮等
-    #   accent: blue                           # 强调色：用于链接、选中状态、滑块等交互元素
-    #   toggle:
-    #     icon: octicons/moon-16         # 切换按钮图标：显示为“开”状态的开关
-    #     name: 切换到夜间模式                # 鼠标悬停时显示的提示文字
-
-    - media: "(prefers-color-scheme: dark)"  # 监听操作系统是否设置为深色主题
-      scheme: slate                          # 使用 Material 的深色方案（深灰背景，护眼）
-      primary: black                         # 主色调：顶部导航栏变为黑色，更沉浸
-      accent: indigo                         # 强调色：靛蓝色，与深色背景搭配更协调
+    # 夜间模式作为默认主题（放在第一位）
+    - scheme: slate                          # 深色主题
+      primary: black                         # 主色调：黑色
+      accent: indigo                         # 强调色：靛蓝色
       toggle:
-        icon: octicons/sun-16  # 切换按钮图标：显示为“关”状态的开关
-        name: 切换到日间模式                # 鼠标悬停时显示的提示文字
+        icon: octicons/sun-16                # 图标显示为太阳（表示当前是夜间，点击切换到日间）
+        name: 切换到日间模式                  # 提示文字
+
+    # 日间模式作为备选
+    - scheme: default                        # 浅色主题
+      primary: cyan                          # 主色调：青色
+      accent: blue                           # 强调色：蓝色
+      toggle:
+        icon: octicons/moon-16               # 图标显示为月亮（表示当前是日间，点击切换到夜间）
+        name: 切换到夜间模式                  # 提示文字
 
   features:
     - content.code.annotate

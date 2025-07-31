@@ -36,22 +36,12 @@
       /* --- 防止滚动条结束 --- */
     }
 
-    /* --- 防止滚动条 --- */
-    /* 隐藏可能由 tabs 产生的内容或边距 */
-    .md-tabs {
-       display: none; /* 如果不使用 tabs，直接隐藏 */
-       /* 或者如果需要显示但不占用空间:
-       position: absolute;
-       top: /* .md-header 的高度，例如 56px 或使用 calc() */;
-       left: 0;
-       right: 0;
-       z-index: 99;
-       background-color: ...;
-       */
+
+
+    /* 隐藏夜间模式切换按钮 */
+    .md-header__option[data-md-component="palette"] {
+      display: none !important;
     }
-    /* --- 防止滚动条结束 --- */
-
-
     /* Hero 容器 - 占满视口，不产生滚动 */
     .mdx-container {
       width: 100vw;           /* 宽度占满视口宽度 */
@@ -103,20 +93,8 @@
       object-fit: cover; /* 关键：保持比例并覆盖区域 */
       object-position: center center; /* 可选：调整焦点 */
       display: block; /* 移除可能的底部空隙 */
-      /* --- 防止滚动条 --- */
-      user-drag: none;
-      -webkit-user-drag: none;
-      user-select: none;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      /* --- 防止滚动条结束 --- */
     }
 
-    /* 隐藏主要内容区域 */
-    .md-content {
-      display: none !important;
-    }
 
     /* 隐藏主内容容器的内边距/外边距可能产生的空间 */
     .md-main {
@@ -137,25 +115,6 @@
       display: none !important;
     }
     /* --- 防止滚动条结束 --- */
-
-
-    /* --- 关键修改/新增结束 --- */
-
-
-    /* --- 保留原有规则（部分可能被覆盖或修改） --- */
-    /*
-    @media screen and (min-width: 60em) {
-      .md-sidebar--secondary {
-        display: none;
-      }
-    }
-    @media screen and (min-width: 76.25em) {
-      .md-sidebar--primary {
-        display: none;
-      }
-    }
-    */
-    /* --- 保留结束 --- */
 
   </style>
 
