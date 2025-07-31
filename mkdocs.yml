@@ -10,6 +10,7 @@ repo_url: https://github.com/atditto/atditto.github.io
 nav:
   - 主页:
       - index.md
+      - about.md
 
 # Theme Config
 theme:
