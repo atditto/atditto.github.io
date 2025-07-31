@@ -6,9 +6,9 @@ site_author: atditto
 repo_name: atditto/@〃
 repo_url: https://github.com/atditto/atditto.github.io
 
-# Navigation Tab
+# Navigation Config
 nav:
-  - 主页:
+  - 🏠 主页:
       - index.md
       - about.md
 
