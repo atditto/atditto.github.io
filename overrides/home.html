@@ -3,8 +3,7 @@
 
 <!-- 插入自定义 hero -->
 {% block tabs %}
-  {{ super() }}
-
+<!--  {{ super() }}-->
   <!-- 全屏 Hero 区域 -->
   <section class="md-hero md-hero--fullscreen">
     <div class="md-grid">
@@ -94,5 +93,6 @@
   </section>
 {% endblock %}
 
-<!-- 清空内容区域 -->
+<!-- 清空内容和页脚区域 -->
 {% block content %}{% endblock %}
+{% block footer %}{% endblock %}
