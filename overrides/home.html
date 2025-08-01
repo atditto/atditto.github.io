@@ -12,9 +12,7 @@
   <section class="md-hero md-hero--fullscreen">
     <div class="md-grid">
       <div class="md-hero__content">
-        <h1>atditto/@〃</h1>
-        <!-- 可在此添加副标题或引导语 -->
-        <!-- <p>欢迎来到我的知识空间</p> -->
+        {{ page.content }}
       </div>
     </div>
 
@@ -84,6 +82,5 @@
 {% endblock %}
 
 <!-- ==================== 清空主内容与页脚 ==================== -->
-<!-- 首页不显示默认内容区域和页脚 -->
 {% block content %}{% endblock %}
 {% block footer %}{% endblock %}
