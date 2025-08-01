@@ -1,150 +1,98 @@
+<!-- overrides/home.html -->
 {% extends "base.html" %}
-{% block extrahead %}
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}">
-{% endblock %}
-<!-- Render hero under tabs -->
+
+<!-- 插入自定义 hero -->
 {% block tabs %}
   {{ super() }}
 
-  <!-- Additional styles for landing page -->
-  <style>
-
-    /* --- 关键修改/新增开始 --- */
-    /* 重置 html, body 的默认 margin/padding，并防止滚动 */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%; /* 设置高度 */
-      /* --- 防止滚动条 --- */
-      overflow: hidden; /* 隐藏滚动条 - 作用于整个页面 */
-      /* --- 防止滚动条结束 --- */
-    }
-
-    /* 隐藏夜间模式切换按钮 */
-    .md-header__option[data-md-component="palette"] {
-      display: none !important;
-    }
-    /* 应用程序头部 (导航栏) - 绝对定位，覆盖在内容上 */
-    .md-header {
-      position: absolute; /* 关键：绝对定位 */
-      top: 0;
-      left: 0;
-      right: 0;
-      /* 不设置 height 或让其自然高度 */
-      z-index: 100; /* 确保它在最上层 */
-      background-color: initial; /* 可选：半透明背景 */
-      /* background-color: transparent; */ /* 或者完全透明 */
-      box-shadow: none; /* 可选：移除阴影 */
-      /* --- 防止滚动条 --- */
-      /* 确保导航栏本身不增加高度 */
-      margin: 0;
-      padding: 0; /* 检查实际渲染，可能需要调整 */
-      /* --- 防止滚动条结束 --- */
-    }
-
-
-    /* Hero 容器 - 占满视口，不产生滚动 */
-    .mdx-container {
-      width: 100vw;           /* 宽度占满视口宽度 */
-      height: 100vh;          /* 高度占满视口高度 */
-      margin: 0 !important;   /* 强制移除外边距 */
-      padding: 0 !important;  /* 强制移除内边距 */
-      max-width: 100vw !important; /* 覆盖可能的最大宽度 */
-      /* --- 防止滚动条 --- */
-      overflow: hidden;       /* 防止内部内容溢出产生滚动 */
-      /* --- 防止滚动条结束 --- */
-    }
-
-    /* Hero 网格 - 覆盖默认限制，占满容器 */
-    .md-grid {
-      max-width: 100% !important; /* 强制覆盖默认最大宽度 */
-      width: 100%;
-      height: 100%;
-      margin: 0 auto !important; /* 覆盖默认居中可能带来的影响 */
-      padding: 0 !important;     /* 强制移除内边距 */
-      /* --- 防止滚动条 --- */
-      box-sizing: border-box; /* 确保 padding/border 不增加元素总尺寸 */
-      /* --- 防止滚动条结束 --- */
-    }
-
-    /* Hero 内容区域 - 占满整个网格容器 */
-    .mdx-hero {
-      width: 100%;
-      height: 100%; /* 关键：占满父容器 (100vh) */
-      position: relative; /* 为子元素定位提供参考 */
-      /* --- 防止滚动条 --- */
-      overflow: hidden; /* 防止子元素溢出 */
-      margin: 0;
-      padding: 0;
-      /* --- 防止滚动条结束 --- */
-    }
-
-    /* Hero 图片容器 - 占满父容器 */
-    .mdx-hero__image {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Hero 图片本身 - 覆盖并填满容器，防止滚动 */
-    .mdx-hero__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* 关键：保持比例并覆盖区域 */
-      object-position: center center; /* 可选：调整焦点 */
-      display: block; /* 移除可能的底部空隙 */
-    }
-
-
-    /* 隐藏主内容容器的内边距/外边距可能产生的空间 */
-    .md-main {
-      margin: 0 !important;
-      padding: 0 !important;
-      height: 0; /* 不占用垂直空间 */
-    }
-    .md-main__inner {
-      margin: 0 !important;
-      padding: 0 !important;
-      height: 0;
-    }
-
-    /* --- 防止滚动条 --- */
-    /* 隐藏侧边栏以减少复杂性 */
-    .md-sidebar--primary,
-    .md-sidebar--secondary {
-      display: none !important;
-    }
-    /* --- 防止滚动条结束 --- */
-
-  </style>
-
-  <!-- Hero for landing page -->
-  <section class="mdx-container">
-    <div class="md-grid md-typeset">
-      <div class="mdx-hero">
-        <!-- Hero image -->
-        <div class="mdx-hero__image">
-          <img
-            src="assets\images\pexels-alexandre-moreira-2527876-33164259.jpg"
-            alt="Hero Background Image"
-            draggable="false"
-          >
-        </div>
-        <!-- 如果需要文字内容 -->
-        <!--
-        <div class="mdx-hero__content">
-            <h1 style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); z-index: 10; color: white;">Your Headline</h1>
-            <p style="position: absolute; top: 30%; left: 50%; transform: translateX(-50%); z-index: 10; color: white;">Your description.</p>
-        </div>
-        -->
+  <!-- 全屏 Hero 区域 -->
+  <section class="md-hero md-hero--fullscreen">
+    <div class="md-grid">
+      <div class="md-hero__content">
+        <h1>欢迎来到我的文档中心</h1>
+        <p>简洁、高效、现代化的技术文档平台。</p>
+        <a href="{{ 'getting-started/' | url }}" class="md-button md-button--primary">
+          开始阅读
+        </a>
       </div>
     </div>
+
+    <!-- 样式嵌入 -->
+    <style>
+      /* 全屏 Hero 样式 */
+      .md-hero--fullscreen {
+        height: 100vh;
+        background-image: url("{{ 'assets/images/hero.jpg' | url }}");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+
+      /* 兼容移动端视口高度（解决 Safari 等浏览器 vh 问题） */
+      @supports (height: 100svh) {
+        .md-hero--fullscreen {
+          height: 100svh;
+        }
+      }
+
+      /* 响应式优化：小屏幕适配 */
+      @media (max-width: 768px) {
+        .md-hero--fullscreen {
+          height: 80vh;
+        }
+
+        .md-hero__content h1 {
+          font-size: 2rem;
+        }
+
+        .md-hero__content p {
+          font-size: 1.1rem;
+        }
+      }
+
+      /* 隐藏空的内容区域，防止底部空白 */
+      .md-content__inner,
+      .md-main__inner {
+        display: none !important;
+      }
+
+      /* 确保页脚正常显示（即使内容被隐藏） */
+      .md-footer {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1;
+        margin-top: 0 !important;
+      }
+    </style>
+
+    <!-- 页面加载后移除空的内容容器（增强兼容性） -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contentInner = document.querySelector(".md-content__inner");
+        const contentWrapper = contentInner?.closest(".md-content");
+
+        // 如果内容区域为空，则彻底移除
+        if (contentInner && contentWrapper && !contentInner.hasChildNodes()) {
+          contentWrapper.remove();
+        }
+
+        // 可选：调整 main 内部间距
+        const mainInner = document.querySelector(".md-main__inner");
+        if (mainInner) {
+          mainInner.style.margin = "0";
+          mainInner.style.padding = "0";
+        }
+      });
+    </script>
   </section>
 {% endblock %}
 
-<!-- Content -->
+<!-- 清空内容区域 -->
 {% block content %}{% endblock %}
-
-<!-- Application footer -->
-{% block footer %}{% endblock %}
