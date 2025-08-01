@@ -16,6 +16,16 @@ nav:
           - note/web_lab/index.md
           - note/web_lab/day1.md
 
+# 拓展
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list           # 属性列表 { .class #id }
+  - md_in_html          # HTML 内嵌 Markdown
+  - pymdownx.superfences # 代码块增强
+  - toc:
+      permalink: true   # 目录锚点
 
 # Theme Config
 theme:
@@ -24,6 +34,9 @@ theme:
   custom_dir: overrides
   icon:
     logo: octicons/command-palette-16
+  font:
+    text: Roboto
+    code: Roboto Mono
   palette:
     # 夜间模式作为默认主题（放在第一位）
     - scheme: slate                          # 深色主题
