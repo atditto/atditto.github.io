@@ -8,88 +8,97 @@
   <section class="md-hero md-hero--fullscreen">
     <div class="md-grid">
       <div class="md-hero__content">
-        <h1>欢迎来到我的文档中心</h1>
-        <p>简洁、高效、现代化的技术文档平台。</p>
-        <a href="{{ 'getting-started/' | url }}" class="md-button md-button--primary">
-          开始阅读
-        </a>
+        <h1>atditto/@〃</h1>
       </div>
     </div>
 
     <!-- 样式嵌入 -->
     <style>
-      /* 全屏 Hero 样式 */
-      .md-hero--fullscreen {
-        height: 100vh;
-        background-image: url("{{ 'assets/images/hero.jpg' | url }}");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        position: relative;
-      }
+  /* 全局样式重置 */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 防止滚动条出现 */
+    height: 100%;
+  }
 
-      /* 兼容移动端视口高度（解决 Safari 等浏览器 vh 问题） */
-      @supports (height: 100svh) {
-        .md-hero--fullscreen {
-          height: 100svh;
-        }
-      }
+  /* 强制所有元素使用 border-box */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-      /* 响应式优化：小屏幕适配 */
-      @media (max-width: 768px) {
-        .md-hero--fullscreen {
-          height: 80vh;
-        }
+  /* 精确隐藏主题切换按钮 */
+  .md-header__button[title*="切换到日间模式"],
+  .md-header__button[title*="切换到夜间模式"] {
+    display: none !important;
+  }
 
-        .md-hero__content h1 {
-          font-size: 2rem;
-        }
+  /* 全屏 Hero 样式 */
+  .md-hero--fullscreen {
+    height: 100vh;
+    background-image: url("{{ 'assets/images/hero.jpg' | url }}");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 
-        .md-hero__content p {
-          font-size: 1.1rem;
-        }
-      }
+  @supports (height: 100svh) {
+    .md-hero--fullscreen {
+      height: 100svh;
+    }
+  }
 
-      /* 隐藏空的内容区域，防止底部空白 */
-      .md-content__inner,
-      .md-main__inner {
-        display: none !important;
-      }
+  @media (max-width: 768px) {
+    .md-hero--fullscreen {
+      height: 100vh; /* 保持一致 */
+    }
 
-      /* 确保页脚正常显示（即使内容被隐藏） */
-      .md-footer {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1;
-        margin-top: 0 !important;
-      }
-    </style>
+    .md-hero__content h1 {
+      font-size: 2rem;
+    }
+
+    .md-hero__content p {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* 隐藏默认内容区域 */
+  .md-content__inner,
+  .md-main__inner {
+    display: none !important;
+  }
+
+  /* 确保页脚不显示 */
+  .md-footer {
+    display: none !important;
+  }
+</style>
 
     <!-- 页面加载后移除空的内容容器（增强兼容性） -->
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const contentInner = document.querySelector(".md-content__inner");
-        const contentWrapper = contentInner?.closest(".md-content");
+  document.addEventListener("DOMContentLoaded", () => {
+    // 移除主内容区域
+    const contentInner = document.querySelector(".md-content__inner");
+    const mainInner = document.querySelector(".md-main__inner");
+    const contentWrapper = document.querySelector(".md-content");
 
-        // 如果内容区域为空，则彻底移除
-        if (contentInner && contentWrapper && !contentInner.hasChildNodes()) {
-          contentWrapper.remove();
-        }
+    if (contentInner) contentInner.remove();
+    if (mainInner) mainInner.remove();
+    if (contentWrapper) contentWrapper.remove();
 
-        // 可选：调整 main 内部间距
-        const mainInner = document.querySelector(".md-main__inner");
-        if (mainInner) {
-          mainInner.style.margin = "0";
-          mainInner.style.padding = "0";
-        }
-      });
-    </script>
+    // 设置 body 和 html 高度为 100%，并隐藏滚动条
+    document.documentElement.style.height = "100%";
+    document.body.style.height = "100%";
+    document.body.style.overflow = "hidden";
+  });
+</script>
   </section>
 {% endblock %}
 
