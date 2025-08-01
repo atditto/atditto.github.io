@@ -1,8 +1,8 @@
 ---
+hide:
+home: true
 template: home.html
-title: Home
+statistics: true
 ---
-
-
 
 

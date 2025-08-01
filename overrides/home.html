@@ -1,107 +1,89 @@
-<!-- overrides/home.html -->
+<!--
+  overrides/home.html
+  自定义首页模板，用于替换默认首页内容，实现全屏 Hero 区域并隐藏主题切换按钮。
+-->
+
 {% extends "base.html" %}
 
-<!-- 插入自定义 hero -->
+<!-- 替换顶部导航区域（tabs），插入自定义 Hero -->
 {% block tabs %}
-<!--  {{ super() }}-->
+
   <!-- 全屏 Hero 区域 -->
   <section class="md-hero md-hero--fullscreen">
     <div class="md-grid">
       <div class="md-hero__content">
         <h1>atditto/@〃</h1>
+        <!-- 可在此添加副标题或引导语 -->
+        <!-- <p>欢迎来到我的知识空间</p> -->
       </div>
     </div>
 
-    <!-- 样式嵌入 -->
+    <!-- 内联样式：用于控制 Hero 和全局显示效果 -->
     <style>
-  /* 全局样式重置 */
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* 防止滚动条出现 */
-    height: 100%;
-  }
+      /* ==================== 全局样式重置 ==================== */
+      /* 移除默认边距，防止滚动条干扰全屏显示 */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* 隐藏页面滚动条 */
+        height: 100%;
+      }
 
-  /* 强制所有元素使用 border-box */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+      /* 确保所有元素的盒模型为 border-box，便于布局控制 */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
 
-  /* 精确隐藏主题切换按钮 */
-  .md-header__button[title*="切换到日间模式"],
-  .md-header__button[title*="切换到夜间模式"] {
-    display: none !important;
-  }
+      /* ==================== 隐藏主题切换按钮 ==================== */
+      /* 通过属性选择器精确匹配并隐藏日间/夜间模式切换按钮 */
+      .md-header__button[title*="切换到日间模式"],
+      .md-header__button[title*="切换到夜间模式"] {
+        display: none !important;
+      }
 
-  /* 全屏 Hero 样式 */
-  .md-hero--fullscreen {
-    height: 100vh;
-    background-image: url("{{ 'assets/images/hero.jpg' | url }}");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
+      /* ==================== 全屏 Hero 样式 ==================== */
+      .md-hero--fullscreen {
+        height: 100vh; /* 默认使用视口高度 */
+        background-image: url("{{ 'assets/images/hero.jpg' | url }}");
+        background-size: cover;        /* 背景图覆盖整个区域 */
+        background-position: center;   /* 居中对齐背景图 */
+        display: flex;                 /* 使用 Flex 布局垂直居中内容 */
+        align-items: center;           /* 垂直居中 */
+        justify-content: center;       /* 水平居中 */
+        color: white;                  /* 文字颜色为白色以适应深色背景 */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        position: relative;            /* 为后续绝对定位元素提供参考 */
+      }
 
-  @supports (height: 100svh) {
-    .md-hero--fullscreen {
-      height: 100svh;
-    }
-  }
+      /* 支持 100svh 的设备使用更稳定的视口单位（如 Safari 中避免工具栏影响） */
+      @supports (height: 100svh) {
+        .md-hero--fullscreen {
+          height: 100svh;
+        }
+      }
 
-  @media (max-width: 768px) {
-    .md-hero--fullscreen {
-      height: 100vh; /* 保持一致 */
-    }
+      /* ==================== 响应式设计：移动端适配 ==================== */
+      @media (max-width: 768px) {
+        .md-hero--fullscreen {
+          height: 100vh; /* 在小屏设备上回退到 vh 单位 */
+        }
 
-    .md-hero__content h1 {
-      font-size: 2rem;
-    }
+        .md-hero__content h1 {
+          font-size: 2rem; /* 移动端标题字体适中 */
+        }
 
-    .md-hero__content p {
-      font-size: 1.1rem;
-    }
-  }
-
-  /* 隐藏默认内容区域 */
-  .md-content__inner,
-  .md-main__inner {
-    display: none !important;
-  }
-
-  /* 确保页脚不显示 */
-  .md-footer {
-    display: none !important;
-  }
-</style>
-
-    <!-- 页面加载后移除空的内容容器（增强兼容性） -->
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // 移除主内容区域
-    const contentInner = document.querySelector(".md-content__inner");
-    const mainInner = document.querySelector(".md-main__inner");
-    const contentWrapper = document.querySelector(".md-content");
-
-    if (contentInner) contentInner.remove();
-    if (mainInner) mainInner.remove();
-    if (contentWrapper) contentWrapper.remove();
-
-    // 设置 body 和 html 高度为 100%，并隐藏滚动条
-    document.documentElement.style.height = "100%";
-    document.body.style.height = "100%";
-    document.body.style.overflow = "hidden";
-  });
-</script>
+        .md-hero__content p {
+          font-size: 1.1rem; /* 移动端正文稍小 */
+        }
+      }
+    </style>
   </section>
+
 {% endblock %}
 
-<!-- 清空内容和页脚区域 -->
+<!-- ==================== 清空主内容与页脚 ==================== -->
+<!-- 首页不显示默认内容区域和页脚 -->
 {% block content %}{% endblock %}
 {% block footer %}{% endblock %}
