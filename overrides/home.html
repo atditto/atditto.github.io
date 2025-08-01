@@ -20,6 +20,10 @@
       /* --- 防止滚动条结束 --- */
     }
 
+    /* 隐藏夜间模式切换按钮 */
+    .md-header__option[data-md-component="palette"] {
+      display: none !important;
+    }
     /* 应用程序头部 (导航栏) - 绝对定位，覆盖在内容上 */
     .md-header {
       position: absolute; /* 关键：绝对定位 */
@@ -38,10 +42,7 @@
       /* --- 防止滚动条结束 --- */
     }
 
-    /* 隐藏夜间模式切换按钮 */
-    .md-header__option[data-md-component="palette"] {
-      display: none !important;
-    }
+
     /* Hero 容器 - 占满视口，不产生滚动 */
     .mdx-container {
       width: 100vw;           /* 宽度占满视口宽度 */

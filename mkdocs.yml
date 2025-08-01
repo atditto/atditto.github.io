@@ -13,8 +13,8 @@ nav:
   - 📖 笔记:
       - note/index.md
       - "MIT Web Lab(6.962)":
-          - note/6.962/index.md
-          - note/6.962/day1.md
+          - note/web_lab/index.md
+          - note/web_lab/day1.md
 
 
 # Theme Config
