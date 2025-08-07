@@ -12,20 +12,24 @@ nav:
   - 🔗 友链: links.md
   - 🗒️ 笔记:
       - note/index.md
-      - "MIT Web Lab(6.962)":
-          - note/web_lab/index.md
-          - note/web_lab/day1.md
+      - "Web 开发":
+          - note/web/index.md
+          - note/web/day1.md
+      - "计算方法":
+          - note/computing_method/index.md
+          - note/computing_method/ch1.md
 
 # 拓展
 markdown_extensions:
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.emoji
+  - admonition
   - attr_list           # 属性列表 { .class #id }
   - md_in_html          # HTML 内嵌 Markdown
   - pymdownx.superfences # 代码块增强
   - toc:
-      permalink: true   # 目录锚点
+      permalink: true        # 显示锚点链接
+      toc_depth: 3           # 目录深度（支持 h1~h3）
+      permalink_title: "Link to this section"  # 鼠标悬停提示
 
 # Theme Config
 theme:
