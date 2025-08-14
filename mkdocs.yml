@@ -12,19 +12,21 @@ nav:
   - 🔗 友链: links.md
   - 🗒️ 笔记:
       - note/index.md
+      - "数据结构和算法":
+        - note/dsa/index.md
       - "Web 开发":
-          - note/web/index.md
-          - note/web/day1.md
-      - "计算方法":
-          - note/computing_method/index.md
-          - note/computing_method/ch1.md
+        - note/web/index.md
+        - note/web/day1.md
+      - "数值计算方法":
+        - note/computing_method/index.md
+        - note/computing_method/ch1.md
       - "强化学习":
-          - note/rl/index.md
-          - note/rl/jianjie.md
-          - note/rl/celue.md
+        - note/rl/index.md
+        - note/rl/jianjie.md
+        - note/rl/celue.md
   - 🥘 杂项:
       - "":
-          - misc
+        - misc
 
 # 拓展
 markdown_extensions:
