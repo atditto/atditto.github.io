@@ -8,7 +8,9 @@ repo_url: https://github.com/atditto/atditto.github.io
 
 # Navigation Config
 nav:
-  - 🏠 主页: index.md
+  - 🏠 主页: 
+    - index.md
+    - ❤️ 关于我: about.md
   - 🔗 友链: links.md
   - 🗒️ 笔记:
       - note/index.md
@@ -26,7 +28,7 @@ nav:
         - note/rl/celue.md
   - 🥘 杂项:
       - "":
-        - misc
+        - misc/cv.md
 
 # 拓展
 markdown_extensions:
@@ -34,7 +36,14 @@ markdown_extensions:
   - admonition
   - attr_list           # 属性列表 { .class #id }
   - md_in_html          # HTML 内嵌 Markdown
-  - pymdownx.superfences # 代码块增强
+  - pymdownx.superfences: # 代码块增强
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
   - pymdownx.arithmatex:
       generic: true
   - toc:
@@ -44,7 +53,6 @@ markdown_extensions:
 
 # js
 extra_javascript:
-  - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # Theme Config

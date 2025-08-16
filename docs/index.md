@@ -9,4 +9,4 @@ template: home.html
 
 [🔗 朋友们](links.md){ .md-button }
 &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[🗒️ 笔记本](note/index.md){ .md-button }
+[❤️ 关于我](about.md){ .md-button }
