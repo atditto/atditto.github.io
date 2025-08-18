@@ -9,7 +9,7 @@ repo_url: https://github.com/atditto/atditto.github.io
 # Navigation Config
 nav:
   - 🏠 主页: 
-    - index.md
+    - 🏠 主页: index.md
     - 🔗 朋友们: links.md
     - ❤️ 关于我: about.md
   - 📚 课程笔记:
@@ -85,6 +85,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tabbed
+  - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
   - toc:
@@ -95,4 +96,4 @@ markdown_extensions:
 # js
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js  # 使用 jsDelivr 加速
+  - https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js
