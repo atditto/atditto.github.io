@@ -7,9 +7,14 @@ comments: true
 欢迎交换友链！请在本页面下留言或私信我。
 
 <style>
+  
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+      visibility: hidden !important;
+  }
+
   .flink-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
   }
