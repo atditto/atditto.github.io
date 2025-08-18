@@ -27,32 +27,9 @@ nav:
         - paper/beat.md
   - 🥘 西班牙海鲜饭:
         - misc/index.md
-        - misc/quotation.md
+        - "踩坑记录":
+          - misc/troubleshooting/mermaid-not-rendering.md
 
-# 拓展
-markdown_extensions:
-  - pymdownx.emoji
-  - admonition
-  - attr_list           # 属性列表 { .class #id }
-  - md_in_html          # HTML 内嵌 Markdown
-  - pymdownx.superfences: # 代码块增强
-      custom_fences:
-        - name: mermaid
-          class: mermaid-experimental
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.tabbed
-  - pymdownx.arithmatex:
-      generic: true
-  - toc:
-      permalink: true        # 显示锚点链接
-      toc_depth: 3           # 目录深度（支持 h1~h3）
-      permalink_title: "Link to this section"  # 鼠标悬停提示
-
-# js
-extra_javascript:
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # Theme Config
 theme:
@@ -94,4 +71,27 @@ theme:
     - search.share
     # - navigation.prune
 
+# 拓展
+markdown_extensions:
+  - pymdownx.emoji
+  - admonition
+  - attr_list           # 属性列表 { .class #id }
+  - md_in_html          # HTML 内嵌 Markdown
+  - pymdownx.superfences: # 代码块增强
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true        # 显示锚点链接
+      toc_depth: 3           # 目录深度（支持 h1~h3）
+      permalink_title: "Link to this section"  # 鼠标悬停提示
 
+# js
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
