@@ -12,8 +12,7 @@ nav:
     - index.md
     - 🔗 朋友们: links.md
     - ❤️ 关于我: about.md
-
-  - 🗒️ 笔记:
+  - 🗒️ 课程笔记:
       - note/index.md
       - "数据结构和算法":
         - note/dsa/index.md
@@ -23,9 +22,12 @@ nav:
         - note/computing_method/index.md
       - "强化学习":
         - note/rl/index.md
-  - 🥘 杂项:
-      - "":
-        - misc/yulu.md
+  - 📝 论文阅读:
+        - paper/index.md
+        - paper/beat.md
+  - 🥘 西班牙海鲜饭:
+        - misc/index.md
+        - misc/quotation.md
 
 # 拓展
 markdown_extensions:
