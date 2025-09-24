@@ -21,8 +21,7 @@ nav:
         - paper/beat.md
   - 🥘 西班牙海鲜饭:
         - misc/index.md
-        - "踩坑记录":
-          - misc/troubleshooting/mermaid-not-rendering.md
+
 
 
 # Theme Config
